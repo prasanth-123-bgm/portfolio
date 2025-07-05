@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Close mobile menu when clicking on a link
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+  document.querySelectorAll('a ').forEach(link => {
+    link.addEventListener('click', function(e) => {
+      e.preventDefault();
       navLinks.classList.remove('active');
       menuToggle.classList.remove('active');
     });
